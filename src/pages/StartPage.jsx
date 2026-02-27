@@ -1,10 +1,15 @@
-﻿import {useNavigate} from "react-router-dom";
+﻿import { useNavigate } from "react-router-dom";
 
-export default function StartPage(){
+/**
+ * Provides an ability to start a game with a unique ID or return to settings
+ * @component
+ */
+
+export default function StartPage() {
   const navigate = useNavigate();
 
   const startGame = () => {
-    const userId = Math.floor(Math.random()*10000);
+    const userId = Math.floor(Math.random() * 10000);
     navigate(`/game/${userId}`);
   };
 
